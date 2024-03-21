@@ -1,14 +1,13 @@
-import React from 'react'
-import styles from '../styles/Home.module.css' 
+// pages/index.js
+import React from 'react';
 
-export default function Time() {
-  const [time, setTime] = React.useState("Загрузка времени сервера...");
-  React.useEffect(()=>{
-    fetch('api/getServerTime').then(data=>data.text()).then(data=>setTime(data));
-  },[]);
+const HomePage = () => {
   return (
-    <div className={styles.container}>
-      <p>{time}</p>
-    </div>
-  )
-}
+      <div>
+        <h1>Мое ФИО: [Пантюшов Егор Игоревич]</h1>
+        <h2>Моя группа: [20ВВП2]</h2>
+      </div>
+  );
+};
+
+export default HomePage;
